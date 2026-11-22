@@ -1,0 +1,74 @@
+# ------------------------------------------------------------------
+# Vivado project: verilog_ascon_reference
+# Keep: .xpr, sources (*.srcs: RTL, constraints, .bd, IP .xci),
+#       README, scripts. Ignore everything Vivado regenerates.
+# ------------------------------------------------------------------
+
+# Generated project folders (Vivado rebuilds these from the .xpr)
+*.cache/
+*.runs/
+*.sim/
+*.hw/
+*.gen/
+*.ip_user_files/
+.Xil/
+NA/
+
+# Incremental synthesis checkpoint (auto-created by synth runs)
+*.srcs/utils_1/
+
+# Logs, journals and temp files
+*.log
+*.jou
+*.str
+*.pb
+*.wdb
+*.backup.*
+vivado*.zip
+vivado_pid*
+webtalk*
+xsim.dir/
+hs_err_pid*
+
+# Build outputs (bitstreams, checkpoints, hardware exports)
+*.bit
+*.bin
+*.ltx
+*.dcp
+*.xsa
+*.hwdef
+*.sysdef
+
+# Generated IP/BD output products (the .xci / .bd themselves are kept)
+*.srcs/**/ip/*/*
+!*.srcs/**/ip/*/*.xci
+!*.srcs/**/ip/*/*.xcix
+*.srcs/**/bd/*/ip/*/*
+!*.srcs/**/bd/*/ip/*/*.xci
+*.srcs/**/bd/*/hdl/
+*.srcs/**/bd/*/sim/
+*.srcs/**/bd/*/synth/
+*.srcs/**/bd/*/*.bxml
+*.srcs/**/bd/*/*_ooc.xdc
+
+# Custom AXI IP (verilog_ascon_reference.ip_repo/): KEEP hdl/, xgui/,
+# component.xml, drivers/. Only ignore what Vivado generates in there.
+*.ip_repo/**/*.cache/
+*.ip_repo/**/*.runs/
+*.ip_repo/**/*.sim/
+*.ip_repo/**/*.hw/
+*.ip_repo/**/*.gen/
+*.ip_repo/**/*.ip_user_files/
+*.ip_repo/**/edit_*.*/
+*.ip_repo/**/edit_*.xpr
+
+# Temporary "Edit in IP Packager" projects
+*.tmp/
+
+# OS / editor junk
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*~
+.vscode/

@@ -1,0 +1,5 @@
+`include "config.sv"
+`include "functions.sv"
+`include "register.sv"
+`include "asconp.sv"
+`include "ascon_core.sv"
