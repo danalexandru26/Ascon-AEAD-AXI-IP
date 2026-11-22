@@ -20,9 +20,10 @@ verilog_ascon_reference/
 ├── verilog_ascon_reference.srcs/
 │   ├── sources_1/
 │   │   ├── new/ascon_core_all.sv      old `include umbrella, not used by the project
-│   │   └── bd/ASCON_AXI/ASCON_AXI.bd  block design (empty for now, for the AXI IP)
+│   │   └── bd/ASCON_AXI/ASCON_AXI.bd  block design: Zynq PS + SmartConnect + reset + Ascon AXI IP
 │   └── constrs_1/new/timing.xdc       100 MHz clock constraint
-├── verilog_ascon_reference.ip_repo/   custom AXI-Lite IP (work in progress)
+├── verilog_ascon_reference.ip_repo/
+│   └── ASCON_AXI4_LITE_1_0/           custom AXI-Lite IP (hdl/, xgui/, component.xml, drivers/)
 ├── README.md
 └── .gitignore
 ```
@@ -61,11 +62,14 @@ The path is relative in the `.xpr`, so keep the same folder structure
 
 ## Work in progress: AXI-Lite IP
 
-An AXI4-Lite slave IP wrapping the core (based on the Vivado-generated AXI4-Lite
-template, with a separate sequencer module `ascon_seq` that drives the core) is
-being developed. It goes in `verilog_ascon_reference.ip_repo/` (tracked by git:
-`hdl/`, `xgui/` and `component.xml` are kept, Vivado's generated subfolders are
-ignored). Once it is packaged, it will be added to the `ASCON_AXI` block design together with the Zynq PS.
+`ASCON_AXI4_LITE` v1.0 is an AXI4-Lite slave IP that will wrap the core. It started
+from the Vivado-generated AXI4-Lite template and will get a separate sequencer
+module `ascon_seq` that drives the core. It lives in
+`verilog_ascon_reference.ip_repo/ASCON_AXI4_LITE_1_0/`, and the project's IP
+repository setting points there with a relative path, so it moves with the project.
+
+It is already placed in the `ASCON_AXI` block design together with the Zynq PS,
+an AXI SmartConnect and the processor reset block.
 
 ## Opening the project
 
